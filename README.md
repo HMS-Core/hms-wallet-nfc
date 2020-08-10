@@ -4,7 +4,6 @@
 
 * [Introduction](#introduction)
 * [Installation](#installation)
-* [Configuration](#configuration)
 * [Supported Environment](#supported-environment)
 * [Sample Code](#sample-code)
 * [License](#license)
@@ -17,8 +16,6 @@ Before running the demo code, you should have installed Java and Maven.
 
 ## Supported environment
 Oracle Java 1.8 is recommended.
-
-## Configuration
 
 ## Sample code
 PassesController is a unified entry class, which defines the interfaces that need to be implemented.
@@ -35,5 +32,5 @@ You can transfer personalized data through the getPersonalInfo interface.
 4. Unregister
 When the wallet deletes the card, it will call this interface to inform you that the card has been deleted.
 	
-### License
+## License
 HMS wallet server sample code is licensed under the [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
