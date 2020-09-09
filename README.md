@@ -33,6 +33,9 @@ You can transfer personalized data through the getPersonalInfo interface.
 When the wallet deletes the card, it will call this interface to inform you that the card has been deleted.
 
 ## Question or issues
+If you want to evaluate more about HMS Core,
+[r/HMSCore on Reddit](https://www.reddit.com/r/HMSCore/) is for you to keep up with latest news about HMS Core, and to exchange insights with other developers.
+
 If you have questions about how to use HMS samples, try the following options:
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/huawei-mobile-services) is the best place for any programming questions. Be sure to tag your question with 
 **huawei-mobile-services**.
