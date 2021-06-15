@@ -43,7 +43,7 @@ public class DataConvertUtil {
     /**
      * The signature algorithm, used by wallet server
      */
-    public static final String SIGN_MODE_SHA256_RSA = "SHA256WithRSA";
+    public static final String SIGN_MODE_SHA256_RSA = "SHA256WithRSA/PSS";
 
     /**
      * The signature algorithm, used by applet
