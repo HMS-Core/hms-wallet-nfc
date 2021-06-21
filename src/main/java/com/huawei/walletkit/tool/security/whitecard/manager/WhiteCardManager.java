@@ -114,7 +114,7 @@ public class WhiteCardManager {
             return false;
         }
         if (!DataConvertUtil.checkSign(appletPublicKey, signature,
-                Constants.WALLET_PUBLIC_KEY, DataConvertUtil.SIGN_MODE_SHA256_RSA)) {
+                Constants.WALLET_PUBLIC_KEY, DataConvertUtil.SIGN_MODE_SHA256_RSA_PSS)) {
             LogUtil.info("verifyWalletCert, checkSign fail.");
             return false;
         }
@@ -254,7 +254,7 @@ public class WhiteCardManager {
         String jsonString = request.toJsonString();
         LogUtil.info(TAG, "dealWithUnregisterRequest, jsonString=" + jsonString, true);
         if (!DataConvertUtil.checkSign(jsonString, signature, Constants.WALLET_PUBLIC_KEY,
-                DataConvertUtil.SIGN_MODE_SHA256_RSA)) {
+                DataConvertUtil.SIGN_MODE_SHA256_RSA_PSS)) {
             LogUtil.info("dealWithUnregisterRequest, checkSign fail.");
             response.setHttpStatus(String.valueOf(Constants.RESULT_CODE_SIGN_ERROR));
             return response;

@@ -43,7 +43,7 @@ public class DataConvertUtil {
     /**
      * The signature algorithm, used by wallet server
      */
-    public static final String SIGN_MODE_SHA256_RSA = "SHA256WithRSA/PSS";
+    public static final String SIGN_MODE_SHA256_RSA_PSS = "SHA256WithRSA/PSS";
 
     /**
      * The signature algorithm, used by applet
@@ -183,7 +183,7 @@ public class DataConvertUtil {
             PKCS8EncodedKeySpec keySpec = new PKCS8EncodedKeySpec(keyBytes);
             KeyFactory keyFactory = KeyFactory.getInstance("RSA");
             PrivateKey privateKey = keyFactory.generatePrivate(keySpec);
-            Signature signature = Signature.getInstance(SIGN_MODE_SHA256_RSA);
+            Signature signature = Signature.getInstance(SIGN_MODE_SHA256_RSA_PSS);
             signature.initSign(privateKey);
             signature.update(data.getBytes(Constants.UTF8_ENCODING));
             byte[] mi = signature.sign();

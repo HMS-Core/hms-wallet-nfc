@@ -86,7 +86,7 @@ public class ParamChecker {
             return false;
         }
         boolean result = DataConvertUtil.checkSign(certificate.getPublicKey(),
-                certificate.getSignature(), Constants.SERVER_PUBLIC_KEY, DataConvertUtil.SIGN_MODE_SHA256_RSA);
+                certificate.getSignature(), Constants.SERVER_PUBLIC_KEY, DataConvertUtil.SIGN_MODE_SHA256_RSA_PSS);
         LogUtil.info("checkSpServerCertificate, result=" + result);
         return result;
     }
