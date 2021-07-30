@@ -113,8 +113,10 @@ public class WhiteCardManager {
             LogUtil.info("verifyWalletCert, public key or signature is empty.");
             return false;
         }
-        if (!DataConvertUtil.checkSign(appletPublicKey, signature,
-                Constants.WALLET_PUBLIC_KEY, DataConvertUtil.SIGN_MODE_SHA256_RSA_PSS)) {
+        if (!(DataConvertUtil.checkSign(appletPublicKey, signature, Constants.WALLET_PUBLIC_KEY,
+            DataConvertUtil.SIGN_MODE_SHA256_RSA)
+            || DataConvertUtil.checkSign(appletPublicKey, signature, Constants.WALLET_PUBLIC_KEY,
+            DataConvertUtil.SIGN_MODE_SHA256_RSA_PSS))) {
             LogUtil.info("verifyWalletCert, checkSign fail.");
             return false;
         }

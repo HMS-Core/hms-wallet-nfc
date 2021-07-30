@@ -63,6 +63,7 @@ public class LogUtil {
      * @param isSensitiveInfo boolean
      */
     public static void info(String tag, String msg, boolean isSensitiveInfo) {
+        LOGGER.info(getMsg(tag, msg, isSensitiveInfo));
     }
 
 

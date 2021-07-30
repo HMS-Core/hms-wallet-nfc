@@ -45,6 +45,8 @@ public class DataConvertUtil {
      */
     public static final String SIGN_MODE_SHA256_RSA_PSS = "SHA256WithRSA/PSS";
 
+    public static final String SIGN_MODE_SHA256_RSA = "SHA256WithRSA";
+
     /**
      * The signature algorithm, used by applet
      */
