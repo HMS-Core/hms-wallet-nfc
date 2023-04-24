@@ -4,6 +4,7 @@
 
 package com.huawei.walletkit.tool.security.model;
 
+import com.huawei.walletkit.tool.security.whitecard.manager.CommonUtils;
 import com.huawei.walletkit.tool.security.whitecard.manager.KeyValueConnector;
 
 /**
@@ -50,8 +51,12 @@ public class PersonalizeRequest {
      * @return formatted string
      */
     public String toJsonString(String token) {
-        return new KeyValueConnector()
-                .append("passTypeIdentifier", requestBody.getPassTypeIdentifier())
+        KeyValueConnector connector = new KeyValueConnector();
+        if (CommonUtils.isICCECarKey(requestBody.getPassTypeIdentifier())) {
+            connector.append("cardSEId", requestBody.getCardSEId());
+        }
+
+        return connector.append("passTypeIdentifier", requestBody.getPassTypeIdentifier())
                 .append("passVersion", requestBody.getPassVersion())
                 .append("personalizeCert", requestBody.getPersonalizeCert())
                 .append("personalizeCertType", requestBody.getPersonalizeCertType())

@@ -10,6 +10,8 @@ package com.huawei.walletkit.tool.security.model;
  * @since 2020-01-17
  */
 public class RequestBody {
+    private String cardSEId;
+
     private String passTypeIdentifier;
 
     private String serialNumber;
@@ -27,6 +29,14 @@ public class RequestBody {
     private String transPublicKey;
 
     private String transId;
+
+    public String getCardSEId() {
+        return cardSEId;
+    }
+
+    public void setCardSEId(String cardSEId) {
+        this.cardSEId = cardSEId;
+    }
 
     public String getPassTypeIdentifier() {
         return passTypeIdentifier;

@@ -28,11 +28,11 @@ public class DevicePassUnit {
 
     private String organizationName = "Test Orginization";
 
-    private String encryptSessionKey;
+    protected String encryptSessionKey;
 
-    private String encryptUserDeviceFields;
+    protected String encryptUserDeviceFields;
 
-    private String encryptAppletPersonalizeFields;
+    protected String encryptAppletPersonalizeFields;
 
     /**
      * Get encrypted pass info and personalize data
@@ -51,7 +51,7 @@ public class DevicePassUnit {
         return dataInfo;
     }
 
-    private void generatePassData(String transId, String taPublicKey, String appletPublicKey) {
+    protected void generatePassData(String transId, String taPublicKey, String appletPublicKey) {
         LogUtil.info(TAG, "generatePassData, transId=" + LogUtil.parseSensitiveinfo(transId));
         LogUtil.info(TAG, "generatePassData, taPublicKey=" + LogUtil.parseSensitiveinfo(taPublicKey));
         LogUtil.info(TAG, "generatePassData, appletPublicKey=" + LogUtil.parseSensitiveinfo(appletPublicKey));

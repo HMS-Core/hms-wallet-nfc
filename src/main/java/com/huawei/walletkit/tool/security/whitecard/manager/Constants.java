@@ -75,6 +75,11 @@ public class Constants {
     public static final String TOKEN_PREV_PART = "HuaweiPassToken ";
 
     /**
+     * ICCE车钥匙passTypeIdentify统一前缀
+     */
+    public static final String ICCE_CARKEY_PASSTYPE_PREFIX = "hwpass.stdcarkey.";
+
+    /**
      * key of code_ok
      */
     public static final int RESULT_CODE_OK = 0;

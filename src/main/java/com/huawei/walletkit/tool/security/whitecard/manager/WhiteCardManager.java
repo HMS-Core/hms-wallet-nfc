@@ -220,7 +220,12 @@ public class WhiteCardManager {
     }
 
     private PassDataResponse getDevicePassData(RequestBody requestBody) {
-        DevicePassUnit devicePassUnit = new DevicePassUnit();
+        DevicePassUnit devicePassUnit;
+        if (CommonUtils.isICCECarKey(requestBody.getPassTypeIdentifier())) {
+            devicePassUnit = new ICCECarKeyDevicePassUnit();
+        } else {
+            devicePassUnit = new DevicePassUnit();
+        }
         String serialNumber = requestBody.getSerialNumber();
         LogUtil.info(TAG, "getDevicePassData, serialNumber=" + serialNumber, true);
         devicePassUnit.setSerialNumber(serialNumber);
